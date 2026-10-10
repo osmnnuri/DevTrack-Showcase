@@ -2,7 +2,7 @@
 
 <p align="center">
   Projelerini alt görevlere bölüp ilerlemeni yüzde olarak takip ettiğin planlama uygulaması.<br>
-  Geliştiriciler düşünülerek tasarlandı, herkes kullanabilir.
+  GitHub depolarını proje olarak içe aktarır. Geliştiriciler düşünülerek tasarlandı, herkes kullanabilir.
 </p>
 
 ---
@@ -24,10 +24,14 @@ animasyon kütüphaneleri üzerinde pratik yaptım.
 | | |
 |---|---|
 | **Proje listesi** | Projelerini tek ekranda listeleme |
+| **GitHub'dan içe aktarma** | GitHub API ile depolarını alıp uygulamaya proje olarak ekleme |
 | **Alt görevler** | Her projeye alt görev ekleme ve tamamlandı olarak işaretleme |
 | **İlerleme yüzdesi** | Tamamlanan alt görevlerin toplam alt görevlere oranı hesaplanır ve ekranda gösterilir |
 | **Hesap** | Firebase Authentication ile kullanıcı hesabı |
 | **Yedekleme** | Projeler cihazda saklanır ve Firestore'a yedeklenir |
+
+GitHub bağlantısı tek yönlüdür: depolar uygulamaya proje olarak alınır,
+uygulamadan GitHub'da depo oluşturulmaz.
 
 ## Nasıl çalışıyor?
 
@@ -36,7 +40,9 @@ Arayüz (Jetpack Compose + Navigation)
         │
         ├── Room ........ projeler ve alt görevler cihazda tutulur
         │
-        └── Firebase .... Authentication (hesap) + Firestore (bulut kopyası / yedek)
+        ├── Firebase .... Authentication (hesap) + Firestore (bulut kopyası / yedek)
+        │
+        └── GitHub API .. depolar okunur ve proje olarak eklenir
 ```
 
 Uygulama yerel veritabanı ile Firestore'u birlikte kullanır: veriler cihazda
@@ -52,6 +58,7 @@ görevi de görür.
 | Gezinme | Navigation |
 | Yerel veri | Room |
 | Bulut | Firebase Authentication, Cloud Firestore |
+| Dış servis | GitHub API |
 
 ### Yapay zekâ kullanımı
 

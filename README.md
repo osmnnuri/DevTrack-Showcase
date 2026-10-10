@@ -1,20 +1,71 @@
-# DevTrack-Showcase
-DevTrack geliştirici odaklı olmakla birlikte genel kullanıcı kitlesi için tasarlanmış bir planlayıcı/takip uygulamasıdır.
+<h1 align="center">DevTrack</h1>
 
-# Proje Hakkında 
-DevTrack geliştiricilerin yaptıkları proje ve çalışmalarını düzenli ve sistematik bir şekilde takip edebilmesini ve ilerlemelerini kayıt altına almasını sağlayan bir kotlin yazılım çalışmasıdır. 
+<p align="center">
+  Projelerini alt görevlere bölüp ilerlemeni yüzde olarak takip ettiğin planlama uygulaması.<br>
+  Geliştiriciler düşünülerek tasarlandı, herkes kullanabilir.
+</p>
 
-# Kullanılan Teknolojiler 
-- Kotlin
-- Jetpack Compose
-- Local Data/Room
-- Navigation
-- Firebase Database
-- AI Coding
-- AI Image Create
+---
 
-# Proje Amacı 
-Projenin amacı belirtildiği üzere sistematik bir çalışma planı oluşturulmasını hedefler. Bu projeyle birlikte compose bilgimi ve temel animasyon kütüphaneleri üzerinde pratik yaptım. 
+## Proje hakkında
 
-# Kaynak Kodlar 
-Bu projeye ait kaynak kodlar özel (private) bir GitHub reposunda tutulmaktadır. Gerekli görülmesi halinde inceleme için paylaşılabilir.
+DevTrack, üzerinde çalıştığın projeleri düzenli ve sistematik biçimde takip
+etmeni, ilerlemeni kayıt altına almanı sağlayan bir Android uygulamasıdır.
+Geliştirici odaklıdır, ancak planlı çalışmak isteyen herkes için uygundur.
+
+## Neden yaptım?
+
+Amacım sistematik bir çalışma planı oluşturmayı kolaylaştıran bir araç ortaya
+koymaktı. Bu projeyle birlikte Jetpack Compose bilgimi pekiştirdim ve temel
+animasyon kütüphaneleri üzerinde pratik yaptım.
+
+## Özellikler
+
+| | |
+|---|---|
+| **Proje listesi** | Projelerini tek ekranda listeleme |
+| **Alt görevler** | Her projeye alt görev ekleme ve tamamlandı olarak işaretleme |
+| **İlerleme yüzdesi** | Tamamlanan alt görevlerin toplam alt görevlere oranı hesaplanır ve ekranda gösterilir |
+| **Hesap** | Firebase Authentication ile kullanıcı hesabı |
+| **Yedekleme** | Projeler cihazda saklanır ve Firestore'a yedeklenir |
+
+## Nasıl çalışıyor?
+
+```
+Arayüz (Jetpack Compose + Navigation)
+        │
+        ├── Room ........ projeler ve alt görevler cihazda tutulur
+        │
+        └── Firebase .... Authentication (hesap) + Firestore (bulut kopyası / yedek)
+```
+
+Uygulama yerel veritabanı ile Firestore'u birlikte kullanır: veriler cihazda
+Room'da tutulur, Firestore aynı verinin buluttaki kopyasını saklayarak yedek
+görevi de görür.
+
+## Kullanılan teknolojiler
+
+| Katman | Teknoloji |
+|---|---|
+| Dil | Kotlin |
+| Arayüz | Jetpack Compose, Compose animasyonları |
+| Gezinme | Navigation |
+| Yerel veri | Room |
+| Bulut | Firebase Authentication, Cloud Firestore |
+
+### Yapay zekâ kullanımı
+
+Kodlama sürecinde yapay zekâ destekli araçlardan yararlandım; uygulamadaki
+görseller yapay zekâ ile üretildi.
+
+## Durum
+
+Proje tamamlandı. Arayüz dili Türkçedir.
+
+## Kaynak kod
+
+Kaynak kod özel bir depoda tutuluyor; inceleme için talep üzerine paylaşılabilir.
+
+## İletişim
+
+**osmnnuri** · [GitHub](https://github.com/osmnnuri) · osmannuriyasar57@gmail.com
